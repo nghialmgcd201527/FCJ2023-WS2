@@ -12,21 +12,21 @@
     <title>Giới thiệu nhanh về ứng dụng web serverless :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690106668" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690106668" rel="stylesheet">
-    <link href="/css/hybrid.css?1690106668" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690106668" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690106668" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690106668" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690106668" rel="stylesheet">
-    <link href="/css/theme.css?1690106668" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690106668" rel="stylesheet">
+    <link href="/css/nucleus.css?1690130646" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690130646" rel="stylesheet">
+    <link href="/css/hybrid.css?1690130646" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690130646" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690130646" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690130646" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690130646" rel="stylesheet">
+    <link href="/css/theme.css?1690130646" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690130646" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690106668" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690130646" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690106668"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690130646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690106668"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690106668"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690130646"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690130646"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690106668"></script>
+<script type="text/javascript" src="/js/search.js?1690130646"></script>
 
     
   </div>
@@ -1054,7 +1054,8 @@
 
 
 
-	<h4 id="lambda-authorizer-là-gì">Lambda Authorizer là gì?</h4>
+	<p>Mục tiêu của phần này là giới thiệu cho các bạn ứng dụng web cơ bản về serverless và hiểu được cách mà các services <strong>AWS Serverless</strong> tương tác với nhau. Chúng ta sẽ bắt đầu bước này bằng cách giúp bạn làm quen với các phần chuyển động của environtment của ứng dụng web Serverless nói chung. Trong các phần tiếp theo, bạn sẽ sử dụng ứng dụng web này để thêm các tính năng cần thiết để xây dựng ứng dụng SaaS của chúng ta.</p>
+<h4 id="lambda-authorizer-là-gì">Lambda Authorizer là gì?</h4>
 <p>Lambda authorizer là một tính năng của API Gateway mà nó sử dụng Lambda function để kiểm soát truy cập tới API của bạn. Đó là một cách để bổ sung bảo mật cho API của bạn.</p>
 <h4 id="lambda-authorizer-hoạt-động-như-thế-nào">Lambda Authorizer hoạt động như thế nào?</h4>
 <p>Khi client gửi request đến một trong những chức năng của API thì API Gateway sẽ gọi đến Lambda authorizer để xác thực client và trả về IAM policy để kiểm tra client đó có được quyền truy cập hay không.</p>
@@ -1665,19 +1666,19 @@ const generatePolicy = function (principalId, effect, resource) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690106669"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690106669"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690106669"></script>
-    <script src="/js/jquery.sticky.js?1690106669"></script>
-    <script src="/js/featherlight.min.js?1690106669"></script>
-    <script src="/js/highlight.pack.js?1690106669"></script>
+    <script src="/js/clipboard.min.js?1690130646"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690130646"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690130646"></script>
+    <script src="/js/jquery.sticky.js?1690130646"></script>
+    <script src="/js/featherlight.min.js?1690130646"></script>
+    <script src="/js/highlight.pack.js?1690130646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690106669"></script>
-    <script src="/js/learn.js?1690106669"></script>
-    <script src="/js/hugo-learn.js?1690106669"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690130646"></script>
+    <script src="/js/learn.js?1690130646"></script>
+    <script src="/js/hugo-learn.js?1690130646"></script>
 
-    <link href="/mermaid/mermaid.css?1690106669" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690106669"></script>
+    <link href="/mermaid/mermaid.css?1690130646" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690130646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

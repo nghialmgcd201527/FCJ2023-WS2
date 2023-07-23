@@ -12,21 +12,21 @@
     <title>Giới thiệu nhanh về ứng dụng web serverless :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690106668" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690106668" rel="stylesheet">
-    <link href="/css/hybrid.css?1690106668" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690106668" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690106668" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690106668" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690106668" rel="stylesheet">
-    <link href="/css/theme.css?1690106668" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690106668" rel="stylesheet">
+    <link href="/css/nucleus.css?1690130646" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690130646" rel="stylesheet">
+    <link href="/css/hybrid.css?1690130646" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690130646" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690130646" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690130646" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690130646" rel="stylesheet">
+    <link href="/css/theme.css?1690130646" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690130646" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690106668" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690130646" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690106668"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690130646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690106668"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690106668"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690130646"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690130646"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690106668"></script>
+<script type="text/javascript" src="/js/search.js?1690130646"></script>
 
     
   </div>
@@ -1056,18 +1056,18 @@
 
 
 	<h4 id="tổng-quan">Tổng quan</h4>
-<p>Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Ứng dụng mà tới đây chúng ta sẽ triển khai cho phép người dùng tạo ra những todo tasks và gán file vào các task đó. Để đáp ứng được những yêu cầu đó, JavaScript đang chạy trên trình duyệt cần nhờ vào một dịch vụ trên cloud.</p>
-<p>Bạn sẽ dùng Lambda function để mỗi lần user tạo một task, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ task vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật task mới trên giao diện người dùng.</p>
-<p>Function được gọi từ trình duyệt bằng Amazon API Gateway. Bạn sẽ triển khai sự kết nối này ở phần sau. Trong phần này, bạn sẽ chỉ kiểm tra function của bạn ở phạm vi cô lập.</p>
+<p>Mục tiêu của phần này là giới thiệu cho các bạn ứng dụng web cơ bản về serverless và hiểu được cách mà các services <strong>AWS Serverless</strong> tương tác với nhau. Chúng ta sẽ bắt đầu bước này bằng cách giúp bạn làm quen với các phần chuyển động của environtment của ứng dụng web Serverless nói chung. Trong các phần tiếp theo, bạn sẽ sử dụng ứng dụng web này để thêm các tính năng cần thiết để xây dựng ứng dụng SaaS của chúng ta.</p>
+<p>Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Bạn sẽ dùng Lambda function để thực hiện mỗi chức năng mà ứng dụng cần, mỗi lần user gửi request đến, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ dữ liệu vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật trên giao diện người dùng. Function được gọi từ trình duyệt bằng Amazon API Gateway. Bạn sẽ triển khai sự kết nối này ở phần sau. Trong phần này, bạn sẽ chỉ kiểm tra function của bạn ở phạm vi cô lập.</p>
 <h4 id="sam-là-gì">SAM là gì?</h4>
 <p><a href="https://aws.amazon.com/serverless/sam/">Serverless Application Model (SAM)</a> là một open-source framework nó sẽ giúp việc triển khai serverless application trở nên dễ dàng hơn. Nó cung cấp một cách đơn giản để định nghĩa các serverless application, và cung cấp một tập các công cụ để triển khai các ứng dụng đó.</p>
 <p>Nó cho phép chúng ta xác định rõ những yêu cầu của ứng dụng bằng code. SAM chuyển đổi và mở rộng SAM syntax lên AWS Cloudformation để triển khai ứng dụng của bạn. Bạn sẽ thấy và sử dụng SAM templates throughout this workshop.</p>
 <h4 id="sam-hoạt-động-như-thế-nào">SAM hoạt động như thế nào?</h4>
 <p>AWS SAM dựa trên AWS Cloudformation. Một ứng dụng serverless được định nghĩa bằng một CloudFormation template và được triển khai với CloudFormation stack. Tóm lại, AWS SAM template là CloudFormation template.</p>
 <p>AWS SAM xác định một tập hợp tài nguyên mô tả các components chung của ứng dụng serverless. Để AWS SAM có những objects được định nghĩa trong CloudFormation template thì template đó phải gồm phần Transform trong document root là <code>AWS::Serverless-2016-10-31</code>.</p>
-<h4 id="trong-ứng-dụng-của-chúng-ta-tasks-api">Trong ứng dụng của chúng ta: Tasks API</h4>
-<p>Tasks API mà chúng ta sẽ xây dựng trong workshop này bao gồm Amazon API Gateway HTTP endpoints để trigger AWS Lambda functions, nó sẽ đọc và ghi dữ liệu đến cơ sở dữ liệu Amazon DynamoDB. SAM template của Tasks API sẽ gồm một bảng DynamoDB, Lambda functions để liệt kê, xem và cập nhật Tasks trong bảng.</p>
-<p>Trong phần này, bạn sẽ làm việc với Lambda function để tạo một task mới. Các thành phần của Tasks API sẽ được định nghĩa trong <code>template.yaml</code>. Tiếp theo chúng ta sẽ đi vào chi tiết cấu trúc của Lambda function.</p>
+
+<div class="notices tip" ><p>Trong bài này chúng ta sẽ không đi sâu vào phân tích triển khai một ứng dụng web Serverless với SAM template, nên nếu bạn chưa có kiến thức gì về SAM template thì <a href="">hãy tham khảo ở đây</a></p>
+</div>
+
 <h4 id="phân-tích-sam-template">Phân tích SAM template</h4>
 <p>Vào thư mục <strong>serverless-tasks-web</strong> tiếp đến là thư mục <strong>sam</strong> sau đó mở file <strong>template.yaml</strong>. Bên dưới là một đoạn code trong file SAM template dùng để liệt kê danh sách các tasks:</p>
 <p><img src="/images/3.serverlessbackend/3-1.png" alt="VPC"></p>
@@ -1594,19 +1594,19 @@ Thuộc tính <strong>Events</strong> định nghĩa các events sẽ trigger La
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690106668"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690106668"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690106668"></script>
-    <script src="/js/jquery.sticky.js?1690106668"></script>
-    <script src="/js/featherlight.min.js?1690106668"></script>
-    <script src="/js/highlight.pack.js?1690106668"></script>
+    <script src="/js/clipboard.min.js?1690130646"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690130646"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690130646"></script>
+    <script src="/js/jquery.sticky.js?1690130646"></script>
+    <script src="/js/featherlight.min.js?1690130646"></script>
+    <script src="/js/highlight.pack.js?1690130646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690106668"></script>
-    <script src="/js/learn.js?1690106668"></script>
-    <script src="/js/hugo-learn.js?1690106668"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690130646"></script>
+    <script src="/js/learn.js?1690130646"></script>
+    <script src="/js/hugo-learn.js?1690130646"></script>
 
-    <link href="/mermaid/mermaid.css?1690106668" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690106668"></script>
+    <link href="/mermaid/mermaid.css?1690130646" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690130646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

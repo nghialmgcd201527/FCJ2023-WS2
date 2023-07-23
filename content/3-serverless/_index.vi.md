@@ -8,11 +8,9 @@ pre: " <b> 3. </b> "
 
 #### Tổng quan
 
-Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Ứng dụng mà tới đây chúng ta sẽ triển khai cho phép người dùng tạo ra những todo tasks và gán file vào các task đó. Để đáp ứng được những yêu cầu đó, JavaScript đang chạy trên trình duyệt cần nhờ vào một dịch vụ trên cloud.
+Mục tiêu của phần này là giới thiệu cho các bạn ứng dụng web cơ bản về serverless và hiểu được cách mà các services **AWS Serverless** tương tác với nhau. Chúng ta sẽ bắt đầu bước này bằng cách giúp bạn làm quen với các phần chuyển động của environtment của ứng dụng web Serverless nói chung. Trong các phần tiếp theo, bạn sẽ sử dụng ứng dụng web này để thêm các tính năng cần thiết để xây dựng ứng dụng SaaS của chúng ta.
 
-Bạn sẽ dùng Lambda function để mỗi lần user tạo một task, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ task vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật task mới trên giao diện người dùng.
-
-Function được gọi từ trình duyệt bằng Amazon API Gateway. Bạn sẽ triển khai sự kết nối này ở phần sau. Trong phần này, bạn sẽ chỉ kiểm tra function của bạn ở phạm vi cô lập.
+Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Bạn sẽ dùng Lambda function để thực hiện mỗi chức năng mà ứng dụng cần, mỗi lần user gửi request đến, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ dữ liệu vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật trên giao diện người dùng. Function được gọi từ trình duyệt bằng Amazon API Gateway.
 
 #### SAM là gì?
 
@@ -26,36 +24,22 @@ AWS SAM dựa trên AWS Cloudformation. Một ứng dụng serverless được �
 
 AWS SAM xác định một tập hợp tài nguyên mô tả các components chung của ứng dụng serverless. Để AWS SAM có những objects được định nghĩa trong CloudFormation template thì template đó phải gồm phần Transform trong document root là `AWS::Serverless-2016-10-31`.
 
-#### Trong ứng dụng của chúng ta: Tasks API
+{{% notice tip %}}
+Trong bài này chúng ta sẽ không đi sâu vào phân tích triển khai một ứng dụng web Serverless với SAM template, nên nếu bạn chưa có kiến thức gì về SAM template thì [hãy tham khảo ở đây](https://catalog.us-east-1.prod.workshops.aws/workshops/841ce16b-9d86-48ac-a3f6-6a1b29f95d2b/en-US/step-1) để nắm rõ cấu trúc và nội dụng của các file mà mình sẽ chỉ việc chạy script để không mất nhiều thời gian trong bài workshop này.
 
-Tasks API mà chúng ta sẽ xây dựng trong workshop này bao gồm Amazon API Gateway HTTP endpoints để trigger AWS Lambda functions, nó sẽ đọc và ghi dữ liệu đến cơ sở dữ liệu Amazon DynamoDB. SAM template của Tasks API sẽ gồm một bảng DynamoDB, Lambda functions để liệt kê, xem và cập nhật Tasks trong bảng.
+{{% /notice %}}
 
-Trong phần này, bạn sẽ làm việc với Lambda function để tạo một task mới. Các thành phần của Tasks API sẽ được định nghĩa trong `template.yaml`. Tiếp theo chúng ta sẽ đi vào chi tiết cấu trúc của Lambda function.
+Bên dưới là kiến trúc hạ tầng của ứng dụng web này.
 
-#### Phân tích SAM template
+![VPC](/images/3.serverlessbackend/3-1newwwww.png)
 
-Vào thư mục **serverless-tasks-web** tiếp đến là thư mục **sam** sau đó mở file **template.yaml**. Bên dưới là một đoạn code trong file SAM template dùng để liệt kê danh sách các tasks:
+Khi nhìn vào kiến trúc hạ tầng này, bạn sẽ thấy chúng ta có một ứng dụng web ở phía bên trái. Nó đại diện cho ứng dụng để người dùng được sử dụng và trải nghiệm nó. Nó sẽ được truy cập bằng **Amazon CloudFront distribution.** Distribution này sẽ lấy resource của ứng dụng từ **Amazon S3 bucket.** Ứng dụng của chúng tôi truy cập vào các microservices của environment thông qua **API Gateway.** API Gateway này sẽ xử lí từng yêu cầu và route các traffic đến các chức năng thích hợp trong mỗi microservice của ứng dụng. Đối với ví dụ này, chúng ta đã có 2 e-commerce microservices, **Product và Orrder,** được cũng cấp các chức năng CRUD cơ bản. Mỗi service này sử dụng **Amazon DynamoDB** để lưu trữ và quản lí dữ liệu. Nhìn chung, kiến trúc hạ tầng này bao gồm tất cả các yếu tố cơ bản tạo thành một ứng dụng web serverless cơ bản. Tuy nhiên, ở giai đoạn này, solution này sẽ không hỗ trợ cho multi-tenant. Trong tương lai, chúng ta sẽ tìm hiểu và bổ sức các tính năng phục vụ cho multi-tenant.
 
-![VPC](/images/3.serverlessbackend/3-1.png)
+#### Serverless microservices
 
-Đây là properties được định nghĩa trong resource `AWS:Serverless:Function`, chúng ta sẽ bắt đầu tìm hiểu chúng.
+Khái niệm về **microservice** có thể hơi khác một chút đối với **serverless environment.** Đúng là mỗi chứng năng có thể là microservice. Tuy nhiên, phổ biến hơn là có một tập hợp các functions đại diện cho một logical microservice. Trong trường hợp này, ranh giới microservice là API Gateway, được hỗ trợ bởi một hoặc nhiều Lambda functions. Như trong kiến trúc hạ tầng ở trên, Order service được chia thành nhiều functions như create, get, update và delete. Những functions này đều hoạt động trên cùng một dữ liệu và được nhóm lại với nhau thành một logical microservice.
 
-**FunctionName**\
-Thuộc tính **FunctionName** được đặt tên tùy ý cho Lambda function. Nếu chúng ta không đặt tên cho nó, CloudFormation sẽ sử dụng tên của CloudFormation Stack, CloudFormation Resource và random ID.
-
-**CodeUri**\
-Thuộc tính **CodeUri** chỉ định đường dẫn đến mã nguồn của Lambda function trong workspace liên kết với SAM template trong đường dẫn `sam/`. Trong ví dụ này, Đoạn code sẽ nằm ở đường dẫn `src/handlers/` và `getTasks` sẽ là function của nó.
-
-**Handler**\
-Thuộc tính **Handler** chỉ định entry point cho Lambda function. Đối với Javascript, nó sẽ được format dưới dạng **file.function**, trong đó file là tên file chứa function ko có đuôi là **.js** thuộc đường dẫn **CodeUri** được định nghĩa phía trên và **function** là tên của function trong file đó sẽ được thực thi khi Lambda function được gọi.
-
-**Environment**\
-Thuộc tính **Environment** định nghĩa biến môi trường, nó sẽ có sẵn trong Lambda function. Trong ví dụ này, chúng ta đang định nghĩa một biến môi trường **TASKS_TABLE** với giá trị là **TasksTable**. Biến môi trường này sẽ được sử dụng trong Lambda function để truy cập vào DynamoDB table nơi lưu trữ các tasks.
-
-**Events**\
-Thuộc tính **Events** định nghĩa các events sẽ trigger Lambda function khi được gọi. [Event API](https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#api) được tích hợp với Lambda function cùng API Gateway endpoint, tuy nhiên SAM chỉ hỗ trợ Lambda function triggers từ [những nguồn sau](https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types).
-
-**API event** được dùng để xem chi tiết của một Task được định nghĩa ở resource RESTful `/tasks` và được truy cập khi sử dụng phương pháp HTTP GET. SAM sẽ chuyển đổi API event đến API Gateways để gọi Lambda function.
+Cuối cùng, chúng ta đã sử dụng Amazon DynamoDB để lưu trữ dữ liệu của mình và Amazon CloudWatch để lưu trữ tất cả các logs của ứng dụng.
 
 ### Nội dung
 

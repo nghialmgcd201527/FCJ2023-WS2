@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-asas assdd aaaa as as
+Mục tiêu của phần này là giới thiệu cho các bạn ứng dụng web cơ bản về serverless và hiểu được cách mà các services **AWS Serverless** tương tác với nhau. Chúng ta sẽ bắt đầu bước này bằng cách giúp bạn làm quen với các phần chuyển động của environtment của ứng dụng web Serverless nói chung. Trong các phần tiếp theo, bạn sẽ sử dụng ứng dụng web này để thêm các tính năng cần thiết để xây dựng ứng dụng SaaS của chúng ta.
 
 #### Lambda Authorizer là gì?
 
