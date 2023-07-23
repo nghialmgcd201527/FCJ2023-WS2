@@ -1,5 +1,5 @@
 ---
-title: "Cấu hình cho API authorization: API Gateway"
+title: "Giới thiệu nhanh về ứng dụng web serverless"
 date: "`r Sys.Date()`"
 weight: 4
 chapter: false

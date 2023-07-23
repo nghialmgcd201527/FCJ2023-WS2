@@ -63,21 +63,21 @@
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
-	"uri": "/2-prerequiste/2.2-ensurenodejsversion/",
+	"uri": "/2-prerequiste/2.2-repodisk/",
 	"title": "Preparing VPC and EC2",
 	"tags": [],
 	"description": "",
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
-	"uri": "/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/",
+	"uri": "/2-prerequiste/2.3-installtool/",
 	"title": "Preparing VPC and EC2",
 	"tags": [],
 	"description": "",
 	"content": "In this step, we will need to create a VPC with 2 public / private subnets. Then create 1 EC2 Instance Linux located in the public subnet, 1 EC2 Instance Windows located in the private subnet.\nThe architecture overview after you complete this step will be as follows:\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC Content Create VPC Create Public Subnet Create Private Subnet Create security group Create public Linux server Create private Windows server "
 },
 {
-	"uri": "/2-prerequiste/2.4-installamplifycli/",
+	"uri": "/2-prerequiste/2.4-cloudwatch/",
 	"title": "Preparing VPC and EC2",
 	"tags": [],
 	"description": "",

@@ -110,40 +110,40 @@
                 href="/2-prerequiste/2.1-createcloud9workspace/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.2-ensurenodejsversion/</loc>
+    <loc>/2-prerequiste/2.2-repodisk/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.2-ensurenodejsversion/"
+                href="/vi/2-prerequiste/2.2-repodisk/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.2-ensurenodejsversion/"
+                href="/2-prerequiste/2.2-repodisk/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/</loc>
+    <loc>/2-prerequiste/2.3-installtool/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                href="/vi/2-prerequiste/2.3-installtool/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.3-clonerepositoryandavoidingfreespace/"
+                href="/2-prerequiste/2.3-installtool/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.4-installamplifycli/</loc>
+    <loc>/2-prerequiste/2.4-cloudwatch/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.4-installamplifycli/"
+                href="/vi/2-prerequiste/2.4-cloudwatch/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.4-installamplifycli/"
+                href="/2-prerequiste/2.4-cloudwatch/"
                 />
   </url><url>
     <loc>/</loc>
