@@ -6,6 +6,8 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
+asas assdd aaaa as as
+
 #### Lambda Authorizer là gì?
 
 Lambda authorizer là một tính năng của API Gateway mà nó sử dụng Lambda function để kiểm soát truy cập tới API của bạn. Đó là một cách để bổ sung bảo mật cho API của bạn.
