@@ -40,6 +40,30 @@
                 href="/vi/3-serverless/3.1-deploy/"
                 />
   </url><url>
+    <loc>/vi/4-saas/3.1-deploy-copy-2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/3.1-deploy-copy-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/3.1-deploy-copy-2/"
+                />
+  </url><url>
+    <loc>/vi/4-saas/3.1-deploy-copy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/3.1-deploy-copy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/3.1-deploy-copy/"
+                />
+  </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -50,6 +74,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-introduce/"
+                />
+  </url><url>
+    <loc>/vi/4-saas/4.1-ini/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.1-ini/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.1-ini/"
                 />
   </url><url>
     <loc>/vi/6-test/6.1-dynamodb/</loc>
@@ -94,18 +130,6 @@
                 href="/vi/1-introduce/1.2-whyserverless/"
                 />
   </url><url>
-    <loc>/vi/3-serverless/3.2-lambdafunction/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-serverless/3.2-lambdafunction/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-serverless/3.2-lambdafunction/"
-                />
-  </url><url>
     <loc>/vi/2-prerequiste/2.2-repodisk/</loc>
     <xhtml:link
                 rel="alternate"
@@ -116,6 +140,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/2-prerequiste/2.2-repodisk/"
+                />
+  </url><url>
+    <loc>/vi/3-serverless/3.2-adddata/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-serverless/3.2-adddata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-serverless/3.2-adddata/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/2.3-installtool/</loc>
@@ -156,18 +192,30 @@
   </url><url>
     <loc>/vi/5-deploy/5.3-initializeamplify/</loc>
   </url><url>
-    <loc>/vi/5-deploy/5.4-buildapp/</loc>
-  </url><url>
-    <loc>/vi/4-apigateway/</loc>
+    <loc>/vi/3-serverless/3.3-reviewcode/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-apigateway/"
+                href="/3-serverless/3.3-reviewcode/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-apigateway/"
+                href="/vi/3-serverless/3.3-reviewcode/"
+                />
+  </url><url>
+    <loc>/vi/5-deploy/5.4-buildapp/</loc>
+  </url><url>
+    <loc>/vi/4-saas/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/"
                 />
   </url><url>
     <loc>/vi/1-introduce/1.4-serverlessused/</loc>

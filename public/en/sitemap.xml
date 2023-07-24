@@ -14,6 +14,42 @@
                 href="/3-serverless/3.1-deploy/"
                 />
   </url><url>
+    <loc>/4-saas/3.1-deploy-copy-2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/3.1-deploy-copy-2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/3.1-deploy-copy-2/"
+                />
+  </url><url>
+    <loc>/4-saas/3.1-deploy-copy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/3.1-deploy-copy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/3.1-deploy-copy/"
+                />
+  </url><url>
+    <loc>/4-saas/4.1-ini/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.1-ini/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.1-ini/"
+                />
+  </url><url>
     <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -146,16 +182,28 @@
                 href="/"
                 />
   </url><url>
-    <loc>/3-serverless/3.2-lambdafunction/</loc>
+    <loc>/3-serverless/3.2-adddata/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-serverless/3.2-lambdafunction/"
+                href="/vi/3-serverless/3.2-adddata/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-serverless/3.2-lambdafunction/"
+                href="/3-serverless/3.2-adddata/"
+                />
+  </url><url>
+    <loc>/3-serverless/3.3-reviewcode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-serverless/3.3-reviewcode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-serverless/3.3-reviewcode/"
                 />
   </url><url>
     <loc>/2-prerequiste/</loc>
@@ -182,16 +230,16 @@
                 href="/3-serverless/"
                 />
   </url><url>
-    <loc>/4-apigateway/</loc>
+    <loc>/4-saas/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-apigateway/"
+                href="/vi/4-saas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-apigateway/"
+                href="/4-saas/"
                 />
   </url><url>
     <loc>/7-rekognition/</loc>
