@@ -28,6 +28,18 @@
   </url><url>
     <loc>/vi/5-deploy/5.1-deployserverless/</loc>
   </url><url>
+    <loc>/vi/3-serverless/3.1-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-serverless/3.1-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-serverless/3.1-deploy/"
+                />
+  </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -38,18 +50,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/1-introduce/"
-                />
-  </url><url>
-    <loc>/vi/3-serverless/3.1-dynamodb/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-serverless/3.1-dynamodb/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-serverless/3.1-dynamodb/"
                 />
   </url><url>
     <loc>/vi/6-test/6.1-dynamodb/</loc>

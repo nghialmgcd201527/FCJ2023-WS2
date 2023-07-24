@@ -12,21 +12,21 @@
     <title>Giới thiệu nhanh về ứng dụng web serverless :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690130646" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690130646" rel="stylesheet">
-    <link href="/css/hybrid.css?1690130646" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690130646" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690130646" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690130646" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690130646" rel="stylesheet">
-    <link href="/css/theme.css?1690130646" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690130646" rel="stylesheet">
+    <link href="/css/nucleus.css?1690165253" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690165253" rel="stylesheet">
+    <link href="/css/hybrid.css?1690165253" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690165253" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690165253" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690165253" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690165253" rel="stylesheet">
+    <link href="/css/theme.css?1690165253" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690165253" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690130646" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690165253" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690130646"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690165253"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690130646"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690130646"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690165253"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690165253"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690130646"></script>
+<script type="text/javascript" src="/js/search.js?1690165253"></script>
 
     
   </div>
@@ -441,13 +441,13 @@
  
   
     
-    <li data-nav-id="/vi/3-serverless/3.1-dynamodb/" title="Khai báo Table trong DynamoDB" class="dd-item 
+    <li data-nav-id="/vi/3-serverless/3.1-deploy/" title="Deploy ứng dụng" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-serverless/3.1-dynamodb/">
-           <b> 3.1. </b> Khai báo Table trong DynamoDB
+      <a href="/vi/3-serverless/3.1-deploy/">
+           <b> 3.1. </b> Deploy ứng dụng
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1057,7 +1057,7 @@
 
 	<h4 id="tổng-quan">Tổng quan</h4>
 <p>Mục tiêu của phần này là giới thiệu cho các bạn ứng dụng web cơ bản về serverless và hiểu được cách mà các services <strong>AWS Serverless</strong> tương tác với nhau. Chúng ta sẽ bắt đầu bước này bằng cách giúp bạn làm quen với các phần chuyển động của environtment của ứng dụng web Serverless nói chung. Trong các phần tiếp theo, bạn sẽ sử dụng ứng dụng web này để thêm các tính năng cần thiết để xây dựng ứng dụng SaaS của chúng ta.</p>
-<p>Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Bạn sẽ dùng Lambda function để thực hiện mỗi chức năng mà ứng dụng cần, mỗi lần user gửi request đến, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ dữ liệu vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật trên giao diện người dùng. Function được gọi từ trình duyệt bằng Amazon API Gateway. Bạn sẽ triển khai sự kết nối này ở phần sau. Trong phần này, bạn sẽ chỉ kiểm tra function của bạn ở phạm vi cô lập.</p>
+<p>Trong phần này, chúng ta sẽ sử dụng Serverless Application Model (SAM) để xây dựng một quy trình backend để xử lí các yêu cầu từ ứng dụng web. Bạn sẽ dùng Lambda function để thực hiện mỗi chức năng mà ứng dụng cần, mỗi lần user gửi request đến, nó sẽ được gọi thực thi. Funtion này sẽ lưu trữ dữ liệu vào DynamoDB, sau đó sẽ gửi phản hồi đến phần front-end và cập nhật trên giao diện người dùng. Function được gọi từ trình duyệt bằng Amazon API Gateway.</p>
 <h4 id="sam-là-gì">SAM là gì?</h4>
 <p><a href="https://aws.amazon.com/serverless/sam/">Serverless Application Model (SAM)</a> là một open-source framework nó sẽ giúp việc triển khai serverless application trở nên dễ dàng hơn. Nó cung cấp một cách đơn giản để định nghĩa các serverless application, và cung cấp một tập các công cụ để triển khai các ứng dụng đó.</p>
 <p>Nó cho phép chúng ta xác định rõ những yêu cầu của ứng dụng bằng code. SAM chuyển đổi và mở rộng SAM syntax lên AWS Cloudformation để triển khai ứng dụng của bạn. Bạn sẽ thấy và sử dụng SAM templates throughout this workshop.</p>
@@ -1065,24 +1065,15 @@
 <p>AWS SAM dựa trên AWS Cloudformation. Một ứng dụng serverless được định nghĩa bằng một CloudFormation template và được triển khai với CloudFormation stack. Tóm lại, AWS SAM template là CloudFormation template.</p>
 <p>AWS SAM xác định một tập hợp tài nguyên mô tả các components chung của ứng dụng serverless. Để AWS SAM có những objects được định nghĩa trong CloudFormation template thì template đó phải gồm phần Transform trong document root là <code>AWS::Serverless-2016-10-31</code>.</p>
 
-<div class="notices tip" ><p>Trong bài này chúng ta sẽ không đi sâu vào phân tích triển khai một ứng dụng web Serverless với SAM template, nên nếu bạn chưa có kiến thức gì về SAM template thì <a href="">hãy tham khảo ở đây</a></p>
+<div class="notices tip" ><p>Trong bài này chúng ta sẽ không đi sâu vào phân tích triển khai một ứng dụng web Serverless với SAM template, nên nếu bạn chưa có kiến thức gì về SAM template thì <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/841ce16b-9d86-48ac-a3f6-6a1b29f95d2b/en-US/step-1">hãy tham khảo ở đây</a> để nắm rõ cấu trúc và nội dụng của các file mà mình sẽ chỉ việc chạy script để không mất nhiều thời gian trong bài workshop này.</p>
 </div>
 
-<h4 id="phân-tích-sam-template">Phân tích SAM template</h4>
-<p>Vào thư mục <strong>serverless-tasks-web</strong> tiếp đến là thư mục <strong>sam</strong> sau đó mở file <strong>template.yaml</strong>. Bên dưới là một đoạn code trong file SAM template dùng để liệt kê danh sách các tasks:</p>
-<p><img src="/images/3.serverlessbackend/3-1.png" alt="VPC"></p>
-<p>Đây là properties được định nghĩa trong resource <code>AWS:Serverless:Function</code>, chúng ta sẽ bắt đầu tìm hiểu chúng.</p>
-<p><strong>FunctionName</strong><br>
-Thuộc tính <strong>FunctionName</strong> được đặt tên tùy ý cho Lambda function. Nếu chúng ta không đặt tên cho nó, CloudFormation sẽ sử dụng tên của CloudFormation Stack, CloudFormation Resource và random ID.</p>
-<p><strong>CodeUri</strong><br>
-Thuộc tính <strong>CodeUri</strong> chỉ định đường dẫn đến mã nguồn của Lambda function trong workspace liên kết với SAM template trong đường dẫn <code>sam/</code>. Trong ví dụ này, Đoạn code sẽ nằm ở đường dẫn <code>src/handlers/</code> và <code>getTasks</code> sẽ là function của nó.</p>
-<p><strong>Handler</strong><br>
-Thuộc tính <strong>Handler</strong> chỉ định entry point cho Lambda function. Đối với Javascript, nó sẽ được format dưới dạng <strong>file.function</strong>, trong đó file là tên file chứa function ko có đuôi là <strong>.js</strong> thuộc đường dẫn <strong>CodeUri</strong> được định nghĩa phía trên và <strong>function</strong> là tên của function trong file đó sẽ được thực thi khi Lambda function được gọi.</p>
-<p><strong>Environment</strong><br>
-Thuộc tính <strong>Environment</strong> định nghĩa biến môi trường, nó sẽ có sẵn trong Lambda function. Trong ví dụ này, chúng ta đang định nghĩa một biến môi trường <strong>TASKS_TABLE</strong> với giá trị là <strong>TasksTable</strong>. Biến môi trường này sẽ được sử dụng trong Lambda function để truy cập vào DynamoDB table nơi lưu trữ các tasks.</p>
-<p><strong>Events</strong><br>
-Thuộc tính <strong>Events</strong> định nghĩa các events sẽ trigger Lambda function khi được gọi. <a href="https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#api">Event API</a> được tích hợp với Lambda function cùng API Gateway endpoint, tuy nhiên SAM chỉ hỗ trợ Lambda function triggers từ <a href="https://github.com/aws/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types">những nguồn sau</a>.</p>
-<p><strong>API event</strong> được dùng để xem chi tiết của một Task được định nghĩa ở resource RESTful <code>/tasks</code> và được truy cập khi sử dụng phương pháp HTTP GET. SAM sẽ chuyển đổi API event đến API Gateways để gọi Lambda function.</p>
+<p>Bên dưới là kiến trúc hạ tầng của ứng dụng web này.</p>
+<p><img src="/images/3.serverlessbackend/3-1newwwww.png" alt="VPC"></p>
+<p>Khi nhìn vào kiến trúc hạ tầng này, bạn sẽ thấy chúng ta có một ứng dụng web ở phía bên trái. Nó đại diện cho ứng dụng để người dùng được sử dụng và trải nghiệm nó. Nó sẽ được truy cập bằng <strong>Amazon CloudFront distribution.</strong> Distribution này sẽ lấy resource của ứng dụng từ <strong>Amazon S3 bucket.</strong> Ứng dụng của chúng tôi truy cập vào các microservices của environment thông qua <strong>API Gateway.</strong> API Gateway này sẽ xử lí từng yêu cầu và route các traffic đến các chức năng thích hợp trong mỗi microservice của ứng dụng. Đối với ví dụ này, chúng ta đã có 2 e-commerce microservices, <strong>Product và Orrder,</strong> được cũng cấp các chức năng CRUD cơ bản. Mỗi service này sử dụng <strong>Amazon DynamoDB</strong> để lưu trữ và quản lí dữ liệu. Nhìn chung, kiến trúc hạ tầng này bao gồm tất cả các yếu tố cơ bản tạo thành một ứng dụng web serverless cơ bản. Tuy nhiên, ở giai đoạn này, solution này sẽ không hỗ trợ cho multi-tenant. Trong tương lai, chúng ta sẽ tìm hiểu và bổ sức các tính năng phục vụ cho multi-tenant.</p>
+<h4 id="serverless-microservices">Serverless microservices</h4>
+<p>Khái niệm về <strong>microservice</strong> có thể hơi khác một chút đối với <strong>serverless environment.</strong> Đúng là mỗi chứng năng có thể là microservice. Tuy nhiên, phổ biến hơn là có một tập hợp các functions đại diện cho một logical microservice. Trong trường hợp này, ranh giới microservice là API Gateway, được hỗ trợ bởi một hoặc nhiều Lambda functions. Như trong kiến trúc hạ tầng ở trên, Order service được chia thành nhiều functions như create, get, update và delete. Những functions này đều hoạt động trên cùng một dữ liệu và được nhóm lại với nhau thành một logical microservice.</p>
+<p>Cuối cùng, chúng ta đã sử dụng Amazon DynamoDB để lưu trữ dữ liệu của mình và Amazon CloudWatch để lưu trữ tất cả các logs của ứng dụng.</p>
 <h3 id="nôi-dung">Nội dung</h3>
 <ul>
 <li><a href="3.1-dynamodb/">Khai báo Table trong DynamoDB</a></li>
@@ -1584,7 +1575,7 @@ Thuộc tính <strong>Events</strong> định nghĩa các events sẽ trigger La
 			<a class="nav nav-prev" href="/vi/2-prerequiste/2.4-cloudwatch/" title="Thiết lập role ARN của CloudWatch log cho API Gateway"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-serverless/3.1-dynamodb/" title="Khai báo Table trong DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-serverless/3.1-deploy/" title="Deploy ứng dụng" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1594,19 +1585,19 @@ Thuộc tính <strong>Events</strong> định nghĩa các events sẽ trigger La
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690130646"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690130646"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690130646"></script>
-    <script src="/js/jquery.sticky.js?1690130646"></script>
-    <script src="/js/featherlight.min.js?1690130646"></script>
-    <script src="/js/highlight.pack.js?1690130646"></script>
+    <script src="/js/clipboard.min.js?1690165253"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690165253"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690165253"></script>
+    <script src="/js/jquery.sticky.js?1690165253"></script>
+    <script src="/js/featherlight.min.js?1690165253"></script>
+    <script src="/js/highlight.pack.js?1690165253"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690130646"></script>
-    <script src="/js/learn.js?1690130646"></script>
-    <script src="/js/hugo-learn.js?1690130646"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690165253"></script>
+    <script src="/js/learn.js?1690165253"></script>
+    <script src="/js/hugo-learn.js?1690165253"></script>
 
-    <link href="/mermaid/mermaid.css?1690130646" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690130646"></script>
+    <link href="/mermaid/mermaid.css?1690165253" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690165253"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
