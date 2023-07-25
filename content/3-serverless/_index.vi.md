@@ -43,5 +43,6 @@ Cuối cùng, chúng ta đã sử dụng Amazon DynamoDB để lưu trữ dữ l
 
 ### Nội dung
 
-- [Khai báo Table trong DynamoDB](3.1-dynamodb/)
-- [Tạo Lambda function](3.2-lambdafunction/)
+- [Deploy ứng dụng](3.1-deploy/)
+- [Thêm data và tìm hiểu quy trình xử lí của architecture](3.2-adddata/)
+- [Review code của ứng dụng](3.3-reviewcode/)

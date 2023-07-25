@@ -10,4 +10,8 @@ Bây giờ các shared services của chúng ta đã được deploy, chúng ta 
 
 Các tenants cũng có thể onboard trong chế độ self-service. Đối với việc này, chúng ta cần một ứng dụng riêng đại diện cho công cụ hướng tới công chúng có thể được sử dụng để khách hàng tham với tư cách là một tenant.
 
-#### Nội dung
+### Nội dung
+
+- [Sử dụng ứng dụng SaaS admin](5.1-onboardingadmin/)
+- [Sử dụng ứng dụng Sign-up dành cho tenant](5.2-landing/)
+- [Review dữ liệu được lưu trữ](5.3-data/)

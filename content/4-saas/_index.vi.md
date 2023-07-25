@@ -58,3 +58,9 @@ Bước tiếp theo sẽ gọi service Tenant Management để lưu trữ thông
 Một điều bạn có thể nhận thấy là **service tenant registration** không yêu cầu bất kì xác thực nào. Điều này là do thiết kế vì những tenants mới không thể được xác thực. Tuy nhiên, các endpoints được sử dụng để tạo ra tenant admin, tạo ra tenant và províion user đều được bảo vệ. Các endpoints này chỉ có thể được gọi từ service Tenant Registration.
 
 Để giữ cho các endpoints nội bồ ở chế độ riêng tư và được bảo vệ, chúng ta đã sử dụng tính năng **API Gateway Resource Policies.** Các chính sách này đảm bảo rằng các entry points REST riêng tư của các services của chúng ta không thể truy cập public.
+
+### Nội dung
+
+- [Khởi tạo dự án](4.1-ini/)
+- [Hoàn thiện code](4.2-misscode/)
+- [Deploy cập nhật nhưng thay đổi](4.3-deploy/)

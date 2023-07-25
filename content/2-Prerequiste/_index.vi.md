@@ -33,4 +33,6 @@ Chúng ta thường dùng môi trường phát triển tích hợp (Integrated D
 ### Nội dung
 
 - [Tạo Cloud9 Workspace](2.1-createcloud9workspace/)
-- [Cài đặt Amplify CLI](2.2-installamplifycli/)
+- [Tăng dung lượng của Cloud9 instance](2.2-repodisk/)
+- [Cài đặt các công cụ cần thiết](2.3-installtool/)
+- [Thiết lập role ARN của CloudWatch log cho API Gateway](2.4-cloudwatch/)
