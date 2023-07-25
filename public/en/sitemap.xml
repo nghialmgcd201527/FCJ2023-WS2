@@ -38,6 +38,18 @@
                 href="/4-saas/4.2-misscode/"
                 />
   </url><url>
+    <loc>/4-saas/4.3-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.3-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.3-deploy/"
+                />
+  </url><url>
     <loc>/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -218,16 +230,40 @@
                 href="/3-serverless/"
                 />
   </url><url>
-    <loc>/4-saas/4.3-onboardingadmin/</loc>
+    <loc>/5-onboarding/5.1-onboardingadmin/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-saas/4.3-onboardingadmin/"
+                href="/vi/5-onboarding/5.1-onboardingadmin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-saas/4.3-onboardingadmin/"
+                href="/5-onboarding/5.1-onboardingadmin/"
+                />
+  </url><url>
+    <loc>/5-onboarding/5.2-landing/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-onboarding/5.2-landing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-onboarding/5.2-landing/"
+                />
+  </url><url>
+    <loc>/5-onboarding/5.3-data/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-onboarding/5.3-data/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-onboarding/5.3-data/"
                 />
   </url><url>
     <loc>/4-saas/</loc>
@@ -242,52 +278,28 @@
                 href="/4-saas/"
                 />
   </url><url>
-    <loc>/7-rekognition/</loc>
+    <loc>/7-terminate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-rekognition/"
+                href="/vi/7-terminate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-rekognition/"
+                href="/7-terminate/"
                 />
   </url><url>
-    <loc>/8-terminate/</loc>
+    <loc>/5-onboarding/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/8-terminate/"
+                href="/vi/5-onboarding/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/8-terminate/"
-                />
-  </url><url>
-    <loc>/5-deploy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/5-deploy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/5-deploy/"
-                />
-  </url><url>
-    <loc>/6-test/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/6-test/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/6-test/"
+                href="/5-onboarding/"
                 />
   </url><url>
     <loc>/categories/</loc>

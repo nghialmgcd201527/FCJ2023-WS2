@@ -26,8 +26,6 @@
                 href="/vi/1-introduce/1.1-whatsaas/"
                 />
   </url><url>
-    <loc>/vi/5-deploy/5.1-deployserverless/</loc>
-  </url><url>
     <loc>/vi/3-serverless/3.1-deploy/</loc>
     <xhtml:link
                 rel="alternate"
@@ -64,7 +62,17 @@
                 href="/vi/4-saas/4.1-ini/"
                 />
   </url><url>
-    <loc>/vi/6-test/6.1-dynamodb/</loc>
+    <loc>/vi/5-onboarding/5.1-onboardingadmin/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-onboarding/5.1-onboardingadmin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-onboarding/5.1-onboardingadmin/"
+                />
   </url><url>
     <loc>/vi/2-prerequiste/2.1-createcloud9workspace/</loc>
     <xhtml:link
@@ -90,8 +98,6 @@
                 href="/vi/2-prerequiste/"
                 />
   </url><url>
-    <loc>/vi/5-deploy/5.2-configapigateway/</loc>
-  </url><url>
     <loc>/vi/4-saas/4.2-misscode/</loc>
     <xhtml:link
                 rel="alternate"
@@ -104,7 +110,17 @@
                 href="/vi/4-saas/4.2-misscode/"
                 />
   </url><url>
-    <loc>/vi/6-test/6.2-logandmonitor/</loc>
+    <loc>/vi/5-onboarding/5.2-landing/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-onboarding/5.2-landing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-onboarding/5.2-landing/"
+                />
   </url><url>
     <loc>/vi/1-introduce/1.2-whyserverless/</loc>
     <xhtml:link
@@ -166,6 +182,18 @@
                 href="/vi/1-introduce/1.3-whatbuild/"
                 />
   </url><url>
+    <loc>/vi/4-saas/4.3-deploy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.3-deploy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.3-deploy/"
+                />
+  </url><url>
     <loc>/vi/3-serverless/</loc>
     <xhtml:link
                 rel="alternate"
@@ -177,8 +205,6 @@
                 hreflang="vi"
                 href="/vi/3-serverless/"
                 />
-  </url><url>
-    <loc>/vi/5-deploy/5.3-initializeamplify/</loc>
   </url><url>
     <loc>/vi/3-serverless/3.3-reviewcode/</loc>
     <xhtml:link
@@ -192,19 +218,17 @@
                 href="/vi/3-serverless/3.3-reviewcode/"
                 />
   </url><url>
-    <loc>/vi/4-saas/4.3-onboardingadmin/</loc>
+    <loc>/vi/5-onboarding/5.3-data/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-saas/4.3-onboardingadmin/"
+                href="/5-onboarding/5.3-data/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-saas/4.3-onboardingadmin/"
+                href="/vi/5-onboarding/5.3-data/"
                 />
-  </url><url>
-    <loc>/vi/5-deploy/5.4-buildapp/</loc>
   </url><url>
     <loc>/vi/4-saas/</loc>
     <xhtml:link
@@ -242,16 +266,16 @@
                 href="/vi/2-prerequiste/2.4-cloudwatch/"
                 />
   </url><url>
-    <loc>/vi/5-deploy/</loc>
+    <loc>/vi/5-onboarding/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-deploy/"
+                href="/5-onboarding/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-deploy/"
+                href="/vi/5-onboarding/"
                 />
   </url><url>
     <loc>/vi/1-introduce/1.5-prior/</loc>
@@ -266,44 +290,18 @@
                 href="/vi/1-introduce/1.5-prior/"
                 />
   </url><url>
-    <loc>/vi/5-deploy/5.5-amplifyhosting/</loc>
+    <loc>/vi/6-sum/</loc>
   </url><url>
-    <loc>/vi/6-test/</loc>
+    <loc>/vi/7-terminate/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-test/"
+                href="/7-terminate/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-test/"
-                />
-  </url><url>
-    <loc>/vi/5-deploy/5.6-deployapp/</loc>
-  </url><url>
-    <loc>/vi/7-rekognition/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/7-rekognition/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/7-rekognition/"
-                />
-  </url><url>
-    <loc>/vi/8-terminate/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/8-terminate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/8-terminate/"
+                href="/vi/7-terminate/"
                 />
   </url><url>
     <loc>/vi/categories/</loc>
