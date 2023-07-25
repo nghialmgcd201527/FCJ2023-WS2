@@ -40,30 +40,6 @@
                 href="/vi/3-serverless/3.1-deploy/"
                 />
   </url><url>
-    <loc>/vi/4-saas/3.1-deploy-copy-2/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-saas/3.1-deploy-copy-2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-saas/3.1-deploy-copy-2/"
-                />
-  </url><url>
-    <loc>/vi/4-saas/3.1-deploy-copy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-saas/3.1-deploy-copy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-saas/3.1-deploy-copy/"
-                />
-  </url><url>
     <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
@@ -115,6 +91,18 @@
                 />
   </url><url>
     <loc>/vi/5-deploy/5.2-configapigateway/</loc>
+  </url><url>
+    <loc>/vi/4-saas/4.2-misscode/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.2-misscode/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.2-misscode/"
+                />
   </url><url>
     <loc>/vi/6-test/6.2-logandmonitor/</loc>
   </url><url>
@@ -202,6 +190,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/3-serverless/3.3-reviewcode/"
+                />
+  </url><url>
+    <loc>/vi/4-saas/4.3-onboardingadmin/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-saas/4.3-onboardingadmin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-saas/4.3-onboardingadmin/"
                 />
   </url><url>
     <loc>/vi/5-deploy/5.4-buildapp/</loc>
