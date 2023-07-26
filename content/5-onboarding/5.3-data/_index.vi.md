@@ -14,19 +14,19 @@ pre: " <b> 5.3. </b> "
 
 Nhập **Cognito** ở thanh tìm kiếm service trên AWS Console sau đó chọn **Cognito.**
 
-![VPC](/images/4.6-data/4.6-1.png)
+![VPC](/images/4.6-data/5.3-1edit.png)
 
 Sau đó bên thanh điều hướng bên trái, chúng ta chọn **User pools.** Chúng ta sẽ thấy các **User pool name** được tạo ra trong buổi workshop của chúng ta sau khi script được deploy hoàn thành. **OperationUsers-ServerlessSaaSUserPool** được dùng để lưu trữ những users SaaS admin và **PooledTenant-ServerlessSaaSUserPool** được dùng để lưu trữ thông tin của user được tạo ra trong quá trình đăng kí.
 
-![VPC](/images/4.6-data/4.6-2.png)
+![VPC](/images/4.6-data/5.3-2edit.png)
 
 Chúng ta chọn **PooledTenant-ServerlessSaaSUserPool.** Click vào **Users** tab để xem các users có sẵn.
 
-![VPC](/images/4.6-data/4.6-3.png)
+![VPC](/images/4.6-data/5.3-3edit.png)
 
 Tiếp theo, chúng ta click vào **Groups** tab để xem các groups dã có sẵn.
 
-![VPC](/images/4.6-data/4.6-4.png)
+![VPC](/images/4.6-data/5.3-4edit.png)
 
 Quay trở lại tab **Users,** click vào bất kì một trong những tenant admin vừa được tạo và để ý đến thuộc tính **tenantId** và **custom role** được thêm vào user này. Những thuộc tính custom này cho phép chúng ta tạo ràng buộc giữa user và tenant. Bất cứ khi nào người dùng xác thực, token được trả về sẽ bao gồm các thuộc tính custom này, cho phép dễ dàng truy cập vào context của tenant trên hệ thống. Context này sẽ đóng vai trò quan trọng trong việc triển khai phần vùng dữ liệu và tenant isolation trong bài workshop này.
 
@@ -36,12 +36,12 @@ Quay trở lại tab **Users,** click vào bất kì một trong những tenant 
 
 Nhập **DynamoDB** ở thanh tìm kiếm service trên AWS Console sau đó chọn **DynamoDB.**
 
-![VPC](/images/4.6-data/4.6-6.png)
+![VPC](/images/4.6-data/5.3-6edit.png)
 
 Ở thanh điều hướng bên trái, chúng ta chọn **Tables.** Nó sẽ hiện thị danh sách các table đã được tạo ở trong bước trước. Chúng ta chọn **ServerlessSaaS-TenantDetails.**
 
-![VPC](/images/4.6-data/4.6-7.png)
+![VPC](/images/4.6-data/5.3-7edit.png)
 
 Tiếp theo, chúng ta sẽ click vào nút **Explore table items** để xem các items được lưu trữ trong table. Ở phần **Items returned,** chúng ta sẽ thấy có 2 object được tạo ra trước đó có trong danh sách này.
 
-![VPC](/images/4.6-data/4.6-8.png)
+![VPC](/images/4.6-data/5.3-8edit.png)

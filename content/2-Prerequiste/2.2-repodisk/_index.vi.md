@@ -25,7 +25,7 @@ git clone https://github.com/aws-samples/aws-serverless-saas-workshop.git
 
 Sau khi chạy câu lệnh trên, chúng ta sẽ được như hình. Chúng ta sẽ thấy thư mục **aws-serverless-saas-workshop** được tạo ra.
 
-![VPC](/images/2.prerequisite/2.2-repodisk/2.2-1.png)
+![VPC](/images/2.prerequisite/2.2-repodisk/2.2-1edit.png)
 
 #### Kiểm tra dung lượng của Cloud9 instance
 
@@ -43,7 +43,7 @@ df -h
 
 Chúng ta sẽ nhận được kết quả như hình bên dưới:
 
-![VPC](/images/2.prerequisite/2.2-repodisk/2.2-2.png)
+![VPC](/images/2.prerequisite/2.2-repodisk/2.2-2edit.png)
 
 filesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của Cloud9 instance này là 3.6G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta được yêu cầu tối thiểu 50G cho workshop này, bắt đầu tăng dung lượng của Cloud9 instance này lên 50G.
 
@@ -77,7 +77,7 @@ df -h
 
 Và chúng ta sẽ thấy kết quả.
 
-![VPC](/images/2.prerequisite/2.2-repodisk/2.2-5.png)
+![VPC](/images/2.prerequisite/2.2-repodisk/2.2-5edit.png)
 
 Như chúng ta thấy ở đường dẫn /dev/nvme0n1p1, dung lượng hiện tại của Cloud9 instance đã tăng lên 50G.
 

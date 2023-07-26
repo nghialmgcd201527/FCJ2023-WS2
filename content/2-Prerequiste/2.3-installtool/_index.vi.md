@@ -58,7 +58,7 @@ Tiếp theo, vẫn trong đường dẫn đó, chúng ta mở file **pre-requisi
 
 Hãy chắn rằng kết quả của bạn sẽ nhận được **PASS** cho tất cả các công cụ được cài đặt và cập nhật:
 
-![VPC](/images/2.prerequisite/2.3-install/2.3-4.png)
+![VPC](/images/2.prerequisite/2.3-install/2.3-4edit.png)
 
 {{% notice note %}}
 Thỉnh thoảng, mặc dù đã cài đặt và cập nhật đúng phiên bản nhưng khi chạy script kiểm tra phiên bản nhưng mà nó vẫn chưa cập nhật thì các bạn hãy restart lại Cloud9 instance bằng câu lệnh `sudo reboot` và chạy lại script kiểm tra phiên bản đó.

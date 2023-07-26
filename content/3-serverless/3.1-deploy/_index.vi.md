@@ -30,21 +30,21 @@ Nếu không may các bạn lỡ tắt trang terminal vừa chạy script, thì 
 
 Nhập **CloudFormation** ở thanh tìm kiếm service trên AWS Console sau đó chọn **CloudFormation**.
 
-![VPC](/images/3.1-deploy/3.1-2.png)
+![VPC](/images/3.1-deploy/3.1-2edit.png)
 
 Ở thanh điều hướng bên trái, chúng ta chọn **Stacks.** Ở đây sẽ hiển thị danh sách các stacks và chúng ta sẽ thấy stack của chúng ta có tên là **serverless-saas-workshop-lab1** vừa được tạo.
 
-![VPC](/images/3.1-deploy/3.1-3.png)
+![VPC](/images/3.1-deploy/3.1-3edit.png)
 
 #### Kiểm tra S3 bucket vừa được tạo
 
-Nhập **S3** ở thanh tìm kiếm service trên AWS Console sau đó chọn **CloudFormation**.
+Nhập **S3** ở thanh tìm kiếm service trên AWS Console sau đó chọn **S3**.
 
-![VPC](/images/3.1-deploy/3.1-4.png)
+![VPC](/images/3.1-deploy/3.1-4edit.png)
 
 Chúng ta sẽ thấy có hai S3 buckets vừa được tạo ra để lưu trữ resource của ứng dụng chúng ta.
 
-![VPC](/images/3.1-deploy/3.1-5.png)
+![VPC](/images/3.1-deploy/3.1-5edit.png)
 
 #### Chạy thử URL của ứng dụng
 
