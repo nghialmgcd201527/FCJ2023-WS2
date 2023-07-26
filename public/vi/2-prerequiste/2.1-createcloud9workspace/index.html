@@ -12,21 +12,21 @@
     <title>Tạo Cloud9 Workspace :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690300547" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690300547" rel="stylesheet">
-    <link href="/css/hybrid.css?1690300547" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690300547" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690300547" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690300547" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690300547" rel="stylesheet">
-    <link href="/css/theme.css?1690300547" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690300547" rel="stylesheet">
+    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
+    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
+    <link href="/css/theme.css?1690341880" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690300547" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690300547"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690300547"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690300547"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690300547"></script>
+<script type="text/javascript" src="/js/search.js?1690341880"></script>
 
     
   </div>
@@ -1010,29 +1010,29 @@
 <ol>
 <li>Nhập <strong>Cloud9</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>Cloud9</strong>.</li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-1new.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-1edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <ol start="2">
 <li>Chọn <strong>Create environment</strong></li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-2new.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-2edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <ol start="3">
 <li>Đặt tên cho Cloud9 Workspace là <strong>saas-workshop.</strong></li>
 <li>Ở mục <strong>Description</strong> hãy nhập mục đích bạn muốn sử dụng trong workspace này. Nhập <strong>Saas workshop with serverless</strong></li>
 <li><strong>Environment type,</strong> ở đây chúng ta sẽ tạo một server để chạy Cloud9 workspace này. Mình sẽ chọn option <strong>New EC2 instance</strong> để tạo một server mới.</li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-3new.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-3edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <ol start="6">
 <li>Sang phần setting cho <strong>New EC2 instance,</strong> chọn <strong>Additional instance types</strong> sau đó chúng ta chọn loại <strong>t3.large.</strong></li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-4new.png" alt="Setting cho new EC2 instance"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-4edit.png" alt="Setting cho new EC2 instance"></p>
 <ol start="7">
 <li>Giữ nguyên mặc định cho những thiết lập khác. Click nút <strong>Create.</strong></li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-5new.png" alt="Keep default"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-5edit.png" alt="Keep default"></p>
 <ol start="8">
 <li>Đợi khoảng 10 phút để Cloud9 Workspace được tạo. Khi Cloud9 Workspace được tạo xong, chúng ta sẽ có một môi trường để làm việc với AWS CLI và các công cụ khác. Trong danh sách các <strong>Environments</strong> được tạo ra, hãy tìm environment <strong>serverless-workshop</strong> và click vào nút <strong>Open</strong> để mở môi trường Cloud9.</li>
 </ol>
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-6new.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-6edit.png" alt="VPC"></p>
 <ol start="10">
 <li>Sau khi môi trường mở ra, chúng ta hãy tắt những phần bên dưới đã được khởi tạo lúc bắt đầu và tạo một <strong>trang terminal</strong> mới.</li>
 </ol>
@@ -1040,7 +1040,7 @@
 <div class="notices warning" ><p>Hãy chắc chắn rằng bạn đã tắt tất cả các tab đã tổn tại khi chúng ta mở Cloud9 IDE trước khi chúng ta thực hiện một hoạt đồng nào đó, hãy click vào <strong>X</strong> button để tắt tab đó. Cái này rất cần thiết để đảm bảo rằng bước tiếp theo khi cài đặt những công cụ cần thiết cho workshop này sẽ không bị ảnh hưởng.</p>
 </div>
 
-<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-7new.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-7edit.png" alt="VPC"></p>
 <p>Workspace của chúng ta sẽ trông như thế này.</p>
 <p><img src="/images/2.prerequisite/2.1-createcloud9workspace/2.1-8new.png" alt="VPC"></p>
 
@@ -1518,19 +1518,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690300547"></script>
-    <script src="/js/jquery.sticky.js?1690300547"></script>
-    <script src="/js/featherlight.min.js?1690300547"></script>
-    <script src="/js/highlight.pack.js?1690300547"></script>
+    <script src="/js/clipboard.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
+    <script src="/js/jquery.sticky.js?1690341880"></script>
+    <script src="/js/featherlight.min.js?1690341880"></script>
+    <script src="/js/highlight.pack.js?1690341880"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690300547"></script>
-    <script src="/js/learn.js?1690300547"></script>
-    <script src="/js/hugo-learn.js?1690300547"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
+    <script src="/js/learn.js?1690341880"></script>
+    <script src="/js/hugo-learn.js?1690341880"></script>
 
-    <link href="/mermaid/mermaid.css?1690300547" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690300547"></script>
+    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690341880"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

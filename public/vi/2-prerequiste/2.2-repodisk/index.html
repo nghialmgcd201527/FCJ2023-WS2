@@ -12,21 +12,21 @@
     <title>Tăng dung lượng của Cloud9 instance :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690300547" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690300547" rel="stylesheet">
-    <link href="/css/hybrid.css?1690300547" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690300547" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690300547" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690300547" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690300547" rel="stylesheet">
-    <link href="/css/theme.css?1690300547" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690300547" rel="stylesheet">
+    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
+    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
+    <link href="/css/theme.css?1690341880" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690300547" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690300547"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690300547"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690300547"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690300547"></script>
+<script type="text/javascript" src="/js/search.js?1690341880"></script>
 
     
   </div>
@@ -1014,7 +1014,7 @@
 <p>Ở trang terminal trên Cloud9, chạy command sau để để clone Git repository <strong>aws-serverless-saas-workshop</strong>:</p>
 <pre tabindex="0"><code>git clone https://github.com/aws-samples/aws-serverless-saas-workshop.git
 </code></pre><p>Sau khi chạy câu lệnh trên, chúng ta sẽ được như hình. Chúng ta sẽ thấy thư mục <strong>aws-serverless-saas-workshop</strong> được tạo ra.</p>
-<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-1.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-1edit.png" alt="VPC"></p>
 <h4 id="kiểm-tra-dung-lượng-của-cloud9-instance">Kiểm tra dung lượng của Cloud9 instance</h4>
 
 <div class="notices info" ><p>Mặc định, dung lượng trống của một Cloud9 instance chỉ tầm khoảng 2GB. Dùng đoạn script dưới đây để tránh tình trạng hết dung lượng và vấn đề trong suốt buổi workshop.</p>
@@ -1024,7 +1024,7 @@
 <pre tabindex="0"><code>cd aws-serverless-saas-workshop
 df -h
 </code></pre><p>Chúng ta sẽ nhận được kết quả như hình bên dưới:</p>
-<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-2.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-2edit.png" alt="VPC"></p>
 <p>filesystem ở đường dẫn /dev/nvme0n1p1 là volume mà chúng ta đang sử dụng. Chúng ta sẽ thấy dung lượng trống của Cloud9 instance này là 3.6G. Để tránh tình trạng hết dung lượng trong suốt buổi workshop, chúng ta được yêu cầu tối thiểu 50G cho workshop này, bắt đầu tăng dung lượng của Cloud9 instance này lên 50G.</p>
 <p>Các bạn hãy vào thư mục <strong>Cloud9Setup</strong> và mở file script <strong>increase-disk-size.sh</strong> bằng đường dẫn sau:</p>
 <pre tabindex="0"><code>cd ~/environment/aws-serverless-saas-workshop/Cloud9Setup/
@@ -1037,7 +1037,7 @@ df -h
 <p>Bây giờ hãy kiểm tra lại dung lượng hiện tại bằng lệnh sau:</p>
 <pre tabindex="0"><code>df -h
 </code></pre><p>Và chúng ta sẽ thấy kết quả.</p>
-<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-5.png" alt="VPC"></p>
+<p><img src="/images/2.prerequisite/2.2-repodisk/2.2-5edit.png" alt="VPC"></p>
 <p>Như chúng ta thấy ở đường dẫn /dev/nvme0n1p1, dung lượng hiện tại của Cloud9 instance đã tăng lên 50G.</p>
 
 <div class="notices note" ><p>Thỉnh thoảng, mặc dù dung lượng của Cloud9 instance đã được tăng lên 50G, nó vẫn có thể hiển thị là 10G khi bạn chạy câu lệnh <code>df -h</code>. Trong trường hợp này, hãy restart Cloud9 instance bằng câu lệnh <code>sudo reboot</code> và chạy lại câu lệnh <code>df -h</code> để kiểm tra lại.</p>
@@ -1521,19 +1521,19 @@ df -h
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690300547"></script>
-    <script src="/js/jquery.sticky.js?1690300547"></script>
-    <script src="/js/featherlight.min.js?1690300547"></script>
-    <script src="/js/highlight.pack.js?1690300547"></script>
+    <script src="/js/clipboard.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
+    <script src="/js/jquery.sticky.js?1690341880"></script>
+    <script src="/js/featherlight.min.js?1690341880"></script>
+    <script src="/js/highlight.pack.js?1690341880"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690300547"></script>
-    <script src="/js/learn.js?1690300547"></script>
-    <script src="/js/hugo-learn.js?1690300547"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
+    <script src="/js/learn.js?1690341880"></script>
+    <script src="/js/hugo-learn.js?1690341880"></script>
 
-    <link href="/mermaid/mermaid.css?1690300547" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690300547"></script>
+    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690341880"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

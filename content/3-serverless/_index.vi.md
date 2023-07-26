@@ -31,7 +31,7 @@ Trong bài này chúng ta sẽ không đi sâu vào phân tích triển khai m�
 
 Bên dưới là kiến trúc hạ tầng của ứng dụng web này.
 
-![VPC](/images/3.serverlessbackend/3-1newwwww.png)
+![VPC](/images/3.serverless/3-1.png)
 
 Khi nhìn vào kiến trúc hạ tầng này, bạn sẽ thấy chúng ta có một ứng dụng web ở phía bên trái. Nó đại diện cho ứng dụng để người dùng được sử dụng và trải nghiệm nó. Nó sẽ được truy cập bằng **Amazon CloudFront distribution.** Distribution này sẽ lấy resource của ứng dụng từ **Amazon S3 bucket.** Ứng dụng của chúng tôi truy cập vào các microservices của environment thông qua **API Gateway.** API Gateway này sẽ xử lí từng yêu cầu và route các traffic đến các chức năng thích hợp trong mỗi microservice của ứng dụng. Đối với ví dụ này, chúng ta đã có 2 e-commerce microservices, **Product và Orrder,** được cũng cấp các chức năng CRUD cơ bản. Mỗi service này sử dụng **Amazon DynamoDB** để lưu trữ và quản lí dữ liệu. Nhìn chung, kiến trúc hạ tầng này bao gồm tất cả các yếu tố cơ bản tạo thành một ứng dụng web serverless cơ bản. Tuy nhiên, ở giai đoạn này, solution này sẽ không hỗ trợ cho multi-tenant. Trong tương lai, chúng ta sẽ tìm hiểu và bổ sức các tính năng phục vụ cho multi-tenant.
 

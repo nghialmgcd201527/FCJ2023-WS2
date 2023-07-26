@@ -10,7 +10,7 @@ Trong buổi workshop này, chúng ta sẽ build cấu trúc chồng lên nhau b
 
 Dưới đây là kiến trúc mà chúng ta sẽ xây dựng trong buổi workshop này.
 
-![Architecture](kkk.png)
+![VPC](/images/1.intro/1.3.png)
 
 Chúng ta sẽ chia kiến trúc này thành 3 phần.
 

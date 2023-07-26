@@ -12,21 +12,21 @@
     <title>Thiết lập role ARN của CloudWatch log cho API Gateway :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690300547" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690300547" rel="stylesheet">
-    <link href="/css/hybrid.css?1690300547" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690300547" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690300547" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690300547" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690300547" rel="stylesheet">
-    <link href="/css/theme.css?1690300547" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690300547" rel="stylesheet">
+    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
+    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
+    <link href="/css/theme.css?1690341880" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690300547" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690300547"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690300547"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690300547"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690300547"></script>
+<script type="text/javascript" src="/js/search.js?1690341880"></script>
 
     
   </div>
@@ -1014,18 +1014,18 @@
 <p>Ở bước này, trong account AWS của chúng ta, chúng ta sẽ đảm bảo role ARN của CloudWatch log được thiết lập cho API Gateway. Bạn cần bước thiết lập này để chắc chắn API Gateway có thể ghi log vào CloudWatch để có thể debug errors của API Gateway REST APIs.</p>
 <h4 id="api-gateway---rest-api">API Gateway - REST API</h4>
 <p>Nhập <strong>API Gateway</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>API Gateway</strong>.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-1.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-1edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Nếu đây là lần đầu bạn sử dụng API Gateway, bạn sẽ thấy trang giới thiệu các tính năng của API Gateway. Dưới <strong>REST API,</strong> ta chọn <strong>Build.</strong> Khi popup <strong>Create Example API</strong> xuất hiện, ta chọn <strong>OK.</strong></p>
 <p>Nếu như đây không phải là lần đầu sử dụng API Gateway, ta chọn <strong>Create API</strong> ở góc trên bên phải của trang.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-2.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-2edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Ở trang <strong>Choose an API type,</strong> ta chọn loại <strong>REST API</strong> nhưng không phải <strong>Private</strong> và chọn <strong>Build.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-3.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-3edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Ở trang <strong>Choose the protocol,</strong> chúng ta sẽ chọn giao thức của nó, chúng ta chọn <strong>REST</strong>, ở phần <strong>Create new API,</strong> chúng ta chọn <strong>Example API,</strong> nó sẽ hiện ra một example API, chúng ta có thể xem chi tiết về nó.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-4.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-4edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Và cuối cùng là nhấn nút <strong>Import,</strong> nó sẽ tạo ra API mới.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-5.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-5edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>API mới sẽ được hiển thị ở đây với cái tên là <strong>PetStore.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-6.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-6edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 
 <div class="notices tip" ><p>Để biết thêm về cách sử dụng API đó, các bạn sẽ xem ở đây: <a href="https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-from-example.html">Example REST API</a></p>
 </div>
@@ -1033,21 +1033,21 @@
 <h4 id="tạo-cloudwatch-role">Tạo CloudWatch role</h4>
 <p>Bước tiếp theo, chúng ta sẽ tạo role ARN cho phép CloudWatch ghi lại log của cách hành động gửi yêu cầu đến API.</p>
 <p>Đầu tiên chúng ta sẽ vào <a href="https://ap-southeast-1.console.aws.amazon.com/iamv2/home?region=ap-southeast-1#/home">AWS Identity and Access Management (IAM) console</a>, ở thanh điều hướng bên trái, chúng ta chọn <strong>Roles.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-7.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-7edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Click vào nút <strong>Create role.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-8.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-8edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Ở trang <strong>Create role,</strong> phần <strong>Trusted entity type,</strong> chúng ta chọn <strong>AWS service,</strong> ở phần <strong>Use case,</strong> chúng ta sẽ click vào drop box <strong>Use cases for other AWS services,</strong> chúng ta chọn <strong>API Gateway</strong> và nhần nút <strong>Next.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-9.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-9edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Ở trang <strong>Add permissions,</strong> chúng ta sẽ thấy policy <strong>AmazonAPIGatewayPushToCloudWatchLogs</strong> đã được chọn sẵn. Policy này có tất cả các quyền chúng ta cần.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-10.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-10edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Cuối cùng ở trang <strong>Name, review, and create,</strong> chúng ta đặt tên cho nó ở phần <strong>Role name,</strong> ở đây mình sẽ đặt là <strong>cloudwatch-api.</strong> Những mục khác chúng ta để mặt định, nhấn nút <strong>Create role.</strong> Vậy là chúng ta đã tạo thành công.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-11.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-11edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Quay trở lại trang <strong>Role,</strong> nhập vào thanh tìm kiếm <strong>cloudwatch-api</strong> nó sẽ hiện thị role mình vừa tạo.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-12.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-12edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Chúng ta click vào role <strong>cloudwatch-api</strong> để xem chi tiết. Chúng ta sẽ thấy giá trị <strong>ARN</strong> của role đó và coppy nó để dùng cho bước tiếp theo.</p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-13.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-13edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Quay trở lại trang <a href="https://ap-southeast-1.console.aws.amazon.com/apigateway/main?region=ap-southeast-1">API Gateway console</a>, chọn API có tên là <strong>PetStore</strong> sau đó ở thanh điều hướng bên trái, ở dưới <strong>Client Certificates,</strong> chúng ta chọn <strong>Settings.</strong> Ở phần <strong>CloudWatch log role ARN,</strong> chúng ta paste ARN của role <strong>cloudwatch-api</strong> vào và nhấn nút <strong>Save.</strong></p>
-<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-14.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
+<p><img src="/images/2.prerequisite/2.4-cloudwatch/2.4-14edit.png" alt="Name for Cloud9 Workspace và chọn Environment type"></p>
 <p>Vậy là chúng ta đã hoàn thành việc thiếp lập CloudWatch log role ARN cho API Gateway. Hãy cùng đi đến bước tiếp theo.</p>
 
 
@@ -1527,19 +1527,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690300547"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690300547"></script>
-    <script src="/js/jquery.sticky.js?1690300547"></script>
-    <script src="/js/featherlight.min.js?1690300547"></script>
-    <script src="/js/highlight.pack.js?1690300547"></script>
+    <script src="/js/clipboard.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
+    <script src="/js/jquery.sticky.js?1690341880"></script>
+    <script src="/js/featherlight.min.js?1690341880"></script>
+    <script src="/js/highlight.pack.js?1690341880"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690300547"></script>
-    <script src="/js/learn.js?1690300547"></script>
-    <script src="/js/hugo-learn.js?1690300547"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
+    <script src="/js/learn.js?1690341880"></script>
+    <script src="/js/hugo-learn.js?1690341880"></script>
 
-    <link href="/mermaid/mermaid.css?1690300547" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690300547"></script>
+    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690341880"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

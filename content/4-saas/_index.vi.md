@@ -15,7 +15,7 @@ Trước khi có thể bắt đầu làm việc với các tenants, chúng ta c�
 
 Mô hình kiến trúc bên dưới miêu ta tổng quát architecture mà chúng ta sẽ build và deploy. Thành phần được tô màu nổi bật với khung màu cam là khu vực mà chúng ta sẽ thêm vào ở bước này để đạt được mục tiêu của buổi workshop này.
 
-![VPC](/images/3.1-deploy/3.1-1kkkkk.png)
+![VPC](/images/1.intro/1.3.png)
 
 #### Ứng dụng dành cho SaaS admin
 
@@ -45,7 +45,7 @@ Service Tenant Management cho phép chúng ta tập trung lại tất cả cấu
 
 Hình bên dưới mô tả quá trình onboarding của tenant và cách mà service Registration dùng các services khác để phân phối quy trình.
 
-![VPC](/images/3.1-deploy/3.1-1kkkkk.png)
+![VPC](/images/4.saas/4-2.png)
 
 Quy trình đăng kí cho tenant là sự kết hợp của một vài bước. Tenant sử dụng ứng dụng sign-up để truy cập trang đăng kí, nơi họ cung cấp thông tin của mình để đăng kí. Thao tác này bắt đầu quá trình đăng kí bằng cách gọi **registration** endpoint bên trong API Gateway.
 

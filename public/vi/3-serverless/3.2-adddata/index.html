@@ -12,21 +12,21 @@
     <title>Thêm data và tìm hiểu quy trình xử lí của architecture :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690300547" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690300547" rel="stylesheet">
-    <link href="/css/hybrid.css?1690300547" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690300547" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690300547" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690300547" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690300547" rel="stylesheet">
-    <link href="/css/theme.css?1690300547" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690300547" rel="stylesheet">
+    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
+    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
+    <link href="/css/theme.css?1690341880" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690300547" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690300547"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690300547"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690300547"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690300547"></script>
+<script type="text/javascript" src="/js/search.js?1690341880"></script>
 
     
   </div>
@@ -999,9 +999,9 @@
 
 
 	<p>Đầu tiên chúng ta sẽ đi đến API Gateway Console, nhập <strong>API Gateway</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>API Gateway</strong>.</p>
-<p><img src="/images/3.2-data/3.2-1.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-1edit.png" alt="VPC"></p>
 <p>Nó sẽ đưa chúng ta đến trang danh sách các APIs đã được tạo. Chúng ta sẽ thấy có một API có tên là <strong>serverless-saas-workshop-lab1</strong> được tạo ra từ file script <strong>deployment.sh</strong> ở bước trước.</p>
-<p><img src="/images/3.2-data/3.2-2.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-2edit.png" alt="VPC"></p>
 <p>Coppy ID của API này. Click vào tên của API đó để xem chi tiết cách chúng ta đã tích hợp API Gateway với Lambda functions. Bạn có thể nhìn thấy bằng cách click vào các methods khác nhau như POST, GET, PUT và sẽ thấy mỗi methods được liên kết với Lamba function của nó. Cách này cho phép bạn mở rộng quy mô từng Lambda một cách độc lập mà không ảnh hưởng đến các Lambda functions khác.</p>
 <p>Như hình dưới đây, chúng ta click vào method POST nó sẽ ra quy trình hoạt động của method này.</p>
 <p><img src="/images/3.2-data/3.2-3.png" alt="VPC"></p>
@@ -1011,21 +1011,21 @@
 <p><img src="/images/3.2-data/3.2-4.png" alt="VPC"></p>
 <p>Bây giờ, cùng kiểm tra lại bảng Amazon DynamoDB và xem dữ liệu đã được thêm vào sau khi lệnh ở trên đã được thực thi thành công.</p>
 <p>Nhập <strong>DynamoDB</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>DynamoDB</strong>.</p>
-<p><img src="/images/3.2-data/3.2-5.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-5edit.png" alt="VPC"></p>
 <p>Ở thanh điều hướng bên trái, chúng ta chọn <strong>Tables.</strong> Ở đây sẽ hiển thị danh sách các tables và chúng ta sẽ thấy tất cả tables được tạo ra là <strong>Order-Lab1</strong> và <strong>Product-Lab1.</strong></p>
-<p><img src="/images/3.2-data/3.2-6.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-6edit.png" alt="VPC"></p>
 <p>Click vào table <strong>Product-Lab1,</strong> sau đó click vào <strong>Explore table items</strong> ở phía bên phải. Để xem các dữ liệu trong bảng.</p>
-<p><img src="/images/3.2-data/3.2-7.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-7edit.png" alt="VPC"></p>
 <p>Và chúng ta sẽ thấy dữ liệu mà chúng ta vừa thêm vào sau khi chạy câu lệnh trên ở phần <strong>Items returned.</strong></p>
-<p><img src="/images/3.2-data/3.2-8.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-8edit.png" alt="VPC"></p>
 <p>Cuối cùng, chúng ta sẽ kiểm tra ở CloudWatch để xem các logs được tạo ra khi gọi API. Nhập <strong>CloudWatch</strong> ở thanh tìm kiếm service trên AWS Console sau đó chọn <strong>DynamoDB</strong>.</p>
-<p><img src="/images/3.2-data/3.2-9.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-9edit.png" alt="VPC"></p>
 <p>Ở thanh điều hướng bên trái, chúng ta chọn <strong>Log groups</strong> trong phần <strong>Logs.</strong> Và chọn log group có tên bao gồm cụm từ <strong>CreateProductFunction.</strong></p>
-<p><img src="/images/3.2-data/3.2-10.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-10edit.png" alt="VPC"></p>
 <p>Sau đó chúng ta xuống dưới phần <strong>Log streams,</strong> click vào log stream vừa được tạo ra khi gọi API.</p>
-<p><img src="/images/3.2-data/3.2-11.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-11edit.png" alt="VPC"></p>
 <p>Cuối cùng, chúng ta sẽ chọn <strong>Timestamp</strong> mà ở đó nó sẽ gồm dữ liệu chúng ta thêm vào khi gọi API.</p>
-<p><img src="/images/3.2-data/3.2-12.png" alt="VPC"></p>
+<p><img src="/images/3.2-data/3.2-12edit.png" alt="VPC"></p>
 <p>Khi các bạn thấy như hình, vậy là chúng ta đã thành công khi thêm data vào hệ thống và nhận các logs về hoạt động này.</p>
 
 
@@ -1505,19 +1505,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690300548"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690300548"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690300548"></script>
-    <script src="/js/jquery.sticky.js?1690300548"></script>
-    <script src="/js/featherlight.min.js?1690300548"></script>
-    <script src="/js/highlight.pack.js?1690300548"></script>
+    <script src="/js/clipboard.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
+    <script src="/js/jquery.sticky.js?1690341880"></script>
+    <script src="/js/featherlight.min.js?1690341880"></script>
+    <script src="/js/highlight.pack.js?1690341880"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690300548"></script>
-    <script src="/js/learn.js?1690300548"></script>
-    <script src="/js/hugo-learn.js?1690300548"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
+    <script src="/js/learn.js?1690341880"></script>
+    <script src="/js/hugo-learn.js?1690341880"></script>
 
-    <link href="/mermaid/mermaid.css?1690300548" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690300548"></script>
+    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690341880"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
