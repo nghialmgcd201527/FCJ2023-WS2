@@ -12,21 +12,21 @@
     <title>Giới thiệu nhanh về ứng dụng web serverless :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
-    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
-    <link href="/css/theme.css?1690341880" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
+    <link href="/css/nucleus.css?1690359047" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690359047" rel="stylesheet">
+    <link href="/css/hybrid.css?1690359047" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690359047" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690359047" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690359047" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690359047" rel="stylesheet">
+    <link href="/css/theme.css?1690359047" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690359047" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690359047" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690359047"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690359047"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690359047"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690341880"></script>
+<script type="text/javascript" src="/js/search.js?1690359047"></script>
 
     
   </div>
@@ -1015,7 +1015,7 @@
 </div>
 
 <p>Bên dưới là kiến trúc hạ tầng của ứng dụng web này.</p>
-<p><img src="/images/3.serverlessbackend/3-1newwwww.png" alt="VPC"></p>
+<p><img src="/images/3.serverless/3-1.png" alt="VPC"></p>
 <p>Khi nhìn vào kiến trúc hạ tầng này, bạn sẽ thấy chúng ta có một ứng dụng web ở phía bên trái. Nó đại diện cho ứng dụng để người dùng được sử dụng và trải nghiệm nó. Nó sẽ được truy cập bằng <strong>Amazon CloudFront distribution.</strong> Distribution này sẽ lấy resource của ứng dụng từ <strong>Amazon S3 bucket.</strong> Ứng dụng của chúng tôi truy cập vào các microservices của environment thông qua <strong>API Gateway.</strong> API Gateway này sẽ xử lí từng yêu cầu và route các traffic đến các chức năng thích hợp trong mỗi microservice của ứng dụng. Đối với ví dụ này, chúng ta đã có 2 e-commerce microservices, <strong>Product và Orrder,</strong> được cũng cấp các chức năng CRUD cơ bản. Mỗi service này sử dụng <strong>Amazon DynamoDB</strong> để lưu trữ và quản lí dữ liệu. Nhìn chung, kiến trúc hạ tầng này bao gồm tất cả các yếu tố cơ bản tạo thành một ứng dụng web serverless cơ bản. Tuy nhiên, ở giai đoạn này, solution này sẽ không hỗ trợ cho multi-tenant. Trong tương lai, chúng ta sẽ tìm hiểu và bổ sức các tính năng phục vụ cho multi-tenant.</p>
 <h4 id="serverless-microservices">Serverless microservices</h4>
 <p>Khái niệm về <strong>microservice</strong> có thể hơi khác một chút đối với <strong>serverless environment.</strong> Đúng là mỗi chứng năng có thể là microservice. Tuy nhiên, phổ biến hơn là có một tập hợp các functions đại diện cho một logical microservice. Trong trường hợp này, ranh giới microservice là API Gateway, được hỗ trợ bởi một hoặc nhiều Lambda functions. Như trong kiến trúc hạ tầng ở trên, Order service được chia thành nhiều functions như create, get, update và delete. Những functions này đều hoạt động trên cùng một dữ liệu và được nhóm lại với nhau thành một logical microservice.</p>
@@ -1500,19 +1500,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690341880"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
-    <script src="/js/jquery.sticky.js?1690341880"></script>
-    <script src="/js/featherlight.min.js?1690341880"></script>
-    <script src="/js/highlight.pack.js?1690341880"></script>
+    <script src="/js/clipboard.min.js?1690359047"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690359047"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690359047"></script>
+    <script src="/js/jquery.sticky.js?1690359047"></script>
+    <script src="/js/featherlight.min.js?1690359047"></script>
+    <script src="/js/highlight.pack.js?1690359047"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
-    <script src="/js/learn.js?1690341880"></script>
-    <script src="/js/hugo-learn.js?1690341880"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690359047"></script>
+    <script src="/js/learn.js?1690359047"></script>
+    <script src="/js/hugo-learn.js?1690359047"></script>
 
-    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690341880"></script>
+    <link href="/mermaid/mermaid.css?1690359047" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690359047"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

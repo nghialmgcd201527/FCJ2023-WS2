@@ -12,21 +12,21 @@
     <title>Giới thiệu SaaS shared services :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1690341880" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690341880" rel="stylesheet">
-    <link href="/css/hybrid.css?1690341880" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690341880" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690341880" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690341880" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690341880" rel="stylesheet">
-    <link href="/css/theme.css?1690341880" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690341880" rel="stylesheet">
+    <link href="/css/nucleus.css?1690359047" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690359047" rel="stylesheet">
+    <link href="/css/hybrid.css?1690359047" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690359047" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690359047" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690359047" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690359047" rel="stylesheet">
+    <link href="/css/theme.css?1690359047" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690359047" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690341880" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690359047" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690341880"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690359047"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690341880"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690341880"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690359047"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690359047"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690341880"></script>
+<script type="text/javascript" src="/js/search.js?1690359047"></script>
 
     
   </div>
@@ -1009,7 +1009,7 @@
 <li>Thêm khác lo lưu trữ dữ liệu để hỗ trợ quản lí người dùng và quản lí tenants như một phần của các shared services của chúng ta.</li>
 </ol>
 <p>Mô hình kiến trúc bên dưới miêu ta tổng quát architecture mà chúng ta sẽ build và deploy. Thành phần được tô màu nổi bật với khung màu cam là khu vực mà chúng ta sẽ thêm vào ở bước này để đạt được mục tiêu của buổi workshop này.</p>
-<p><img src="/images/3.1-deploy/3.1-1kkkkk.png" alt="VPC"></p>
+<p><img src="/images/1.intro/1.3.png" alt="VPC"></p>
 <h4 id="ứng-dụng-dành-cho-saas-admin">Ứng dụng dành cho SaaS admin</h4>
 <p>Ứng dụng dành cho administration nhằm đại diện cho những hành động, những trải nghiệm trên ứng dụng sẽ được dùng bởi các SaaS provider. Ứng dụng này cung cấp những việc quản lí và vận hành cho environment của chúng ta và các tenants của nó.</p>
 <h4 id="landingsign-up-page">Landing/Sign-up page</h4>
@@ -1024,7 +1024,7 @@
 <p>Service Tenant Management cho phép chúng ta tập trung lại tất cả cấu hình và vận hành có thể được thực hiện bởi tenant. Nó bao gồm get, create, update, activate và disable chức năng của tenant. Thông tin chi tiết về tenant được lưu trữ trong table của Amazon DynamoDB.</p>
 <h4 id="tenant-onboarding-flow">Tenant onboarding flow</h4>
 <p>Hình bên dưới mô tả quá trình onboarding của tenant và cách mà service Registration dùng các services khác để phân phối quy trình.</p>
-<p><img src="/images/3.1-deploy/3.1-1kkkkk.png" alt="VPC"></p>
+<p><img src="/images/4.saas/4-2.png" alt="VPC"></p>
 <p>Quy trình đăng kí cho tenant là sự kết hợp của một vài bước. Tenant sử dụng ứng dụng sign-up để truy cập trang đăng kí, nơi họ cung cấp thông tin của mình để đăng kí. Thao tác này bắt đầu quá trình đăng kí bằng cách gọi <strong>registration</strong> endpoint bên trong API Gateway.</p>
 <p>Bước tiếp theo là quy trình gọi đến service User Management để tạo new tenant admin user. Chúng ta đang sử dụng Amazon Cognito làm provider cho buổi workshop này. Service User Management sẽ tạo một Cognito User Group bên trong nhóm người dùng của tenant. Cuối cùng, tenant admin user được tạo ra và được thêm vào nhóm người dùng của tenant.</p>
 <p>Là một phần của việc tạo ra tenant admin user, chúng ta cũng phải liên kết user này với các thuộc tính của tenant. Điều này đạt đượt thông qua các thuộc tính custom của Cognito. Các thuộc tính custom này lưu trữ một số thông tin cụ thể về tenant và user. Đối với solution này, chúng ta đã lưu trữ <strong>TenantId</strong> và <strong>User Role</strong> làm custom attributes.</p>
@@ -1511,19 +1511,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690341880"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690341880"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690341880"></script>
-    <script src="/js/jquery.sticky.js?1690341880"></script>
-    <script src="/js/featherlight.min.js?1690341880"></script>
-    <script src="/js/highlight.pack.js?1690341880"></script>
+    <script src="/js/clipboard.min.js?1690359047"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690359047"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690359047"></script>
+    <script src="/js/jquery.sticky.js?1690359047"></script>
+    <script src="/js/featherlight.min.js?1690359047"></script>
+    <script src="/js/highlight.pack.js?1690359047"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690341880"></script>
-    <script src="/js/learn.js?1690341880"></script>
-    <script src="/js/hugo-learn.js?1690341880"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690359047"></script>
+    <script src="/js/learn.js?1690359047"></script>
+    <script src="/js/hugo-learn.js?1690359047"></script>
 
-    <link href="/mermaid/mermaid.css?1690341880" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690341880"></script>
+    <link href="/mermaid/mermaid.css?1690359047" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690359047"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
